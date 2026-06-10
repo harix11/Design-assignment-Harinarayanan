@@ -1,6 +1,4 @@
-# RTL Design & Digital Electronics Learning Journey
-
-Welcome to my digital design repository! This repository serves as a structured documentation of my daily work, progress, and implementations in RTL design, combinational logic, and sequential circuits. Each day contains HDL design files, testbenches, and verified simulation waveforms.
+ This repository serves as a structured documentation of my daily work, progress, and implementations in RTL design, combinational logic, and sequential circuits. Each day contains HDL design files, testbenches, and verified simulation waveforms.
 
 🔹 Day 1: RTL Design Foundations & Adders
 Focus: Understanding the RTL design flow and implementing basic arithmetic combinational circuits.
