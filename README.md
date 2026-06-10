@@ -83,9 +83,10 @@ To keep the repository clean and scalable for upcoming updates, the project is o
 ├── Day03
 │   ├── fifo/
 │   │   ├── Design/
-|   |   |   ├──fifo.v
-|   |   |   ├──
-|   |   |   └── fifo.md  
+|   |   |   ├──top_mod.v
+|   |   |   ├──machine1.v
+|   |   |   └──machine2.v
+|   |   |   └──fifo.v
 │   │   ├── testbench/fifo_tb.v 
 │   │   └── fifo.md                
 │   └── sequence_detector_1110/
