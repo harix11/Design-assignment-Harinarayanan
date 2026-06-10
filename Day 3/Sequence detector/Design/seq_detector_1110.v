@@ -15,7 +15,7 @@ parameter s3   = 2'b11;
 
 reg [1:0] ps, ns;
 
-// 1. Memory Block (Sequential)
+
 always @(posedge clk) begin
     if(rst) begin
         ps <= idle;
@@ -25,9 +25,9 @@ always @(posedge clk) begin
     end
 end
 
-// 2. Next State and Output Logic (Combinational)
+
 always @(*) begin
-    // Default values to prevent latches
+    
     det = 0;
     ns = ps; 
 
@@ -46,7 +46,7 @@ always @(*) begin
                 ns = s2;     // Got '11'
             end
             else begin
-                ns = idle;   // Got '10' (Broken sequence)
+                ns = idle;   // Got '10' 
             end
         end
         
@@ -61,11 +61,11 @@ always @(*) begin
         
         s3: begin
             if(din == 0) begin
-                ns = idle;   // Got '1110' -> Since '0' cannot start '1110', we reset to idle
-                det = 1;     // MEALY OUTPUT: Goes high instantly when din becomes 0
+                ns = idle;   // reset to idle
+                det = 1;     // 
             end
             else begin
-                ns = s3;     // Got '1111' -> The last three '1's keep us at the '111' stage
+                ns = s3;    
             end
         end
         
