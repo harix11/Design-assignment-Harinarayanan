@@ -38,6 +38,17 @@ Implemented an Overlapping 1110 Sequence Detector utilizing a Finite State Machi
 
 Extensively tested both modules with edge-case scenarios in testbenches and attached the verified simulation waveforms.
 
+🔹 Day 4: Custom Hardware Memory Array Design
+Focus: Understanding synchronous memory architectures, array addressing, and storage blocks in RTL hardware.
+
+Key Tasks:
+
+Designed an 8x8 Block RAM configuration (8 words, 8 bits wide), establishing synchronous write and read behavior.
+
+Implemented proper write-enable control logic and addressing schemas to ensure stable data retention.
+
+Built a tailored testbench to simulate rigorous read/write sequencing across multiple memory addresses, capturing and saving the validated output waveforms.
+
 ---
 
 ## 📂 Repository Directory Structure
@@ -92,5 +103,13 @@ To keep the repository clean and scalable for upcoming updates, the project is o
 │   └── sequence_detector_1110/
 │       ├── Design/seq_det_1110.v
 │       ├── testbench/seq_det_1110_tb.v 
-│       └── seq_det_1110.md         
+│       └── seq_det_1110.md
+│
+├── Day04/
+│   └── block memory generator/
+│       ├── Design/
+│       │   └── bmg.v   
+│       ├── testbench/
+│       │   └── bmg_tb.v 
+│       └── bmg.md            
 └── README.md                       
