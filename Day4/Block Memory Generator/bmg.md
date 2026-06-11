@@ -1,30 +1,31 @@
-
 # Block Memory Generator (BMG) using Verilog
 
 ## Overview
 
-This project demonstrates the implementation and simulation of an 8x8 Block Memory Generator (BMG) using Verilog HDL. The memory stores 8-bit data values and allows read/write operations through address lines.
+This project implements a Block Memory Generator (BMG) using Verilog HDL. The memory supports storing and retrieving 8-bit data values through separate read and write addresses.
 
-The design is commonly used to implement RAM in FPGA-based systems.
+The design demonstrates basic RAM operations including data writing, data reading, and address-based memory access.
 
 ---
 
 ## Features
 
 - 8-bit data width
-- 3-bit address bus
-- Read and write operations
-- FPGA Block RAM implementation
-- Verilog testbench for verification
-- Simulation waveform included
+- 3-bit address width
+- Synchronous write operation
+- Address-based read operation
+- Reset functionality
+- Verilog testbench for simulation
 
 ---
 
 ## Inputs
 
 | Signal | Description |
-|----------|-------------|
-| wr_en | Write enable signal |
+|---------|------------|
+| clk | System clock |
+| rst | Reset signal |
+| wr_en_sim | Write enable |
 | addr_wr_tb[2:0] | Write address |
 | addr_rd_tb[2:0] | Read address |
 | din_sim[7:0] | Data input |
@@ -34,12 +35,12 @@ The design is commonly used to implement RAM in FPGA-based systems.
 ## Outputs
 
 | Signal | Description |
-|----------|-------------|
+|---------|------------|
 | dout_sim[7:0] | Data output |
 
 ---
 
-## Memory Operation
+## Working Principle
 
 ### Write Operation
 
@@ -47,66 +48,65 @@ When `wr_en = 1`:
 
 - Data present at `din_sim` is written into the memory location specified by `addr_wr_tb`.
 
-Example:
-
-| Address | Data Written |
-|----------|-------------|
-| 0 | 00 |
-| 7 | 4A |
-| 2 | F2 |
-| 0 | 8C |
-
----
 
 ### Read Operation
 
 When a read address is applied through `addr_rd_tb`, the data stored at that memory location appears on `dout_sim`.
 
-Example:
+---
 
-| Read Address | Output Data |
-|-------------|-------------|
-| 0 | 8C |
-| 5 | Stored Value |
+## Simulation Sequence
+
+### Data Written
+
+| Address | Data |
+|----------|------|
+| 0 | 00 |
 | 7 | 4A |
+| 2 | F2 |
+| 0 | 8C |
+
+### Data Read
+
+| Address | Output |
+|----------|---------|
+| 7 | 4A |
+
+The waveform confirms that the value written at address `7` is successfully retrieved during the read operation.
 
 ---
 
 ## Simulation Waveform
+<img width="1522" height="765" alt="bmg" src="https://github.com/user-attachments/assets/fcf18e19-c185-42a4-8735-a97b2b86b443" />
 
 The waveform verifies:
 
-1. Data is successfully written into memory locations.
-2. Different addresses are accessed during simulation.
-3. Stored data is correctly retrieved from memory.
-4. The output matches the value stored at the selected read address.
+- Proper clock operation
+- Successful memory write cycles
+- Correct address selection
+- Accurate data retrieval
+- Correct output generation
 
 Observed values:
 
 ```text
-Written Data:
-00 → 4A → F2 → 8C
-
-Read Data:
-4A (from Address 7)
+Write Data : 00 → 4A → F2 → 8C
+Read Data  : 4A
 ```
-
-The simulation confirms correct memory read and write functionality.
 
 ---
 
 ## Applications
 
-- FPGA memory systems
+- FPGA-based RAM implementation
 - Data buffering
-- Lookup tables (LUTs)
-- Embedded processors
-- Digital signal processing
+- Embedded systems
+- Lookup tables
 - Communication systems
+- Digital signal processing
 
 ---
 
 ## Result
 
-The Block Memory Generator was successfully implemented and verified using Verilog HDL. Simulation results confirm that data can be written to and read from memory locations correctly using the address inputs.
-<img width="1582" height="762" alt="bmg" src="https://github.com/user-attachments/assets/f3015252-86b3-438a-92a0-5bf781398b69" />
+The Block Memory Generator was successfully implemented and simulated using Verilog HDL. Data was correctly written to memory locations and retrieved using the specified read addresses, confirming proper memory functionality.
