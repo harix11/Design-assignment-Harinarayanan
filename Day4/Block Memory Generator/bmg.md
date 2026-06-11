@@ -68,9 +68,12 @@ When a read address is applied through `addr_rd_tb`, the data stored at that mem
 
 ### Data Read
 
-| Address | Output |
-|----------|---------|
+| Read Address | Output Data |
+|-------------|-------------|
+| 0 | 8C |
+| 5 | Stored Value |
 | 7 | 4A |
+
 
 The waveform confirms that the value written at address `7` is successfully retrieved during the read operation.
 
