@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project demonstrates the implementation and simulation of a Block Memory Generator (BMG) using Verilog HDL. The memory stores 8-bit data values and allows read/write operations through address lines.
+This project demonstrates the implementation and simulation of an 8x8 Block Memory Generator (BMG) using Verilog HDL. The memory stores 8-bit data values and allows read/write operations through address lines.
 
 The design is commonly used to implement RAM in FPGA-based systems.
 
