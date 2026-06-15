@@ -128,7 +128,7 @@ To keep the repository clean and scalable for upcoming updates, the project is o
 │   │   ├── testbench/ bcd_interface.sv 
 │   │   └── bcd.md           
 │   └── fifo/
-│       ├── rtl/ fifo.sv   
+│       ├── Design/ fifo.sv   
 │       ├── testbench/fifo_interface.sv 
 │       └── fifo.md                   
 └── README.md                       
