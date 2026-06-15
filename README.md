@@ -111,5 +111,14 @@ To keep the repository clean and scalable for upcoming updates, the project is o
 │       │   └── bmg.v   
 │       ├── testbench/
 │       │   └── bmg_tb.v 
-│       └── bmg.md            
+│       └── bmg.md
+├── Day05/
+│   ├── bcd_adder/
+│   │   ├── Design/bcd_adder.sve
+│   │   ├── testbench/ bcd_interface.sv 
+│   │   └── bcd.md           
+│   └── fifo/
+│       ├── rtl/ fifo.sv   
+│       ├── testbench/fifo_interface.sv 
+│       └── fifo.md                   
 └── README.md                       
