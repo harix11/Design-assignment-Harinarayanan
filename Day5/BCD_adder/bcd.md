@@ -55,7 +55,7 @@ Whenever the binary sum exceeds 9, a correction factor of 6 (0110) is added to p
 | 0 | 0 | 0 | 0 | 0 |
 | 4 | 5 | 0 | 9 | 0 |
 | 7 | 6 | 0 | 3 | 1 |
-| 9 | 9 | 0 | 8 | 1 |
+| 9 | 9 | 1 | 9 | 1 |
 | 3 | 5 | 1 | 9 | 0 |
 
 ---
