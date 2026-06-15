@@ -49,6 +49,16 @@ Implemented proper write-enable control logic and addressing schemas to ensure s
 
 Built a tailored testbench to simulate rigorous read/write sequencing across multiple memory addresses, capturing and saving the validated output waveforms.
 
+🔹 Day 5: SystemVerilog Interfacing & Integration
+Focus: Migrating to SystemVerilog constructs and interfacing independent memory blocks with arithmetic functional units.
+
+Key Tasks:
+
+Ported and optimized individual FIFO and BCD Adder components into SystemVerilog (.sv).
+
+Created a top-level structural interface module to seamlessly route data popped from the hardware FIFO straight into the processing stages of the BCD Adder block.
+
+Developed an integrated SystemVerilog testbench to rigorously test the combined data path under various clock cycles, logging successful execution via custom simulation waveforms.
 ---
 
 ## 📂 Repository Directory Structure
