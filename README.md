@@ -125,10 +125,10 @@ To keep the repository clean and scalable for upcoming updates, the project is o
 ├── Day05/
 │   ├── bcd_adder/
 │   │   ├── Design/bcd_adder.sve
-│   │   ├── testbench/ bcd_interface.sv 
+│   │   ├── interface_tb/ bcd_interface.sv 
 │   │   └── bcd.md           
 │   └── fifo/
 │       ├── Design/ fifo.sv   
-│       ├── testbench/fifo_interface.sv 
+│       ├── interface_tb/fifo_interface.sv 
 │       └── fifo.md                   
 └── README.md                       
