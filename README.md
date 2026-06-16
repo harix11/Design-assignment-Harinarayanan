@@ -59,6 +59,17 @@ Ported and optimized individual FIFO and BCD Adder components into SystemVerilog
 Created a top-level structural interface module to seamlessly route data popped from the hardware FIFO straight into the processing stages of the BCD Adder block.
 
 Developed an integrated SystemVerilog testbench to rigorously test the combined data path under various clock cycles, logging successful execution via custom simulation waveforms.
+
+🔹 Day 6: SystemVerilog OOP Verification Constructs
+Focus: Introduction to Object-Oriented Programming (OOP) for hardware verification and abstraction of data packets.
+
+Key Tasks:
+
+Designed a modular FIFO Transaction Class (fifo_transaction.sv) to encapsulate input/output data fields, write/read control parameters, and status flags as a unified object.
+
+Implemented SystemVerilog properties including the rand modifier to enable Constraint-Driven Randomization (CRV) during test execution.
+
+Created custom object constructors (new()) and helper display functions to print transaction states to the simulation console, laying the foundation for a layered verification environment.
 ---
 
 ## 📂 Repository Directory Structure
@@ -130,5 +141,10 @@ To keep the repository clean and scalable for upcoming updates, the project is o
 │   └── fifo/
 │       ├── Design/ fifo_design.sv   
 │       ├── interface_tb/fifo_interface.sv 
-│       └── fifo.md                   
+│       └── fifo.md
+├── Day06
+│   ├── fifo/
+│   │   ├── Design/fifo_design.sv
+│   │   ├── testbench/fifo_transaction.sv 
+│   │   └── fifo_transaction.md                        
 └── README.md                       
