@@ -70,8 +70,8 @@ Designed a modular FIFO Transaction Class (fifo_transaction.sv) to encapsulate i
 Implemented SystemVerilog properties including the rand modifier to enable Constraint-Driven Randomization (CRV) during test execution.
 
 Created custom object constructors (new()) and helper display functions to print transaction states to the simulation console, laying the foundation for a layered verification environment.
----
 
+---
 ## 📂 Repository Directory Structure
 
 To keep the repository clean and scalable for upcoming updates, the project is organized as follows:
