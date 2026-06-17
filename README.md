@@ -71,6 +71,29 @@ Implemented SystemVerilog properties including the rand modifier to enable Const
 
 Created custom object constructors (new()) and helper display functions to print transaction states to the simulation console, laying the foundation for a layered verification environment.
 
+🔹 Day 8: Full Layered Testbench Verification Environment (APB Protocol)
+Focus: Advanced hardware verification using custom OOP architectures to validate AMBA APB protocol configurations.
+
+Key Tasks:
+
+Design Implementation: Developed an APB Slave architecture module managing standard control transfers (PSEL, PENABLE, PWRITE, PADDR, PWDATA, PRDATA, PREADY).
+
+Layered Infrastructure Setup: Implemented a industry-standard verification blueprint using class isolation:
+
+Interface: Groups the design signals with custom clocking blocks to prevent race conditions.
+
+Transaction: Formulates data payloads and randomized read/write operation types.
+
+Generator: Spawns stimulus packets and ships them down the verification pipeline via Mailboxes.
+
+Driver: Converts transaction-level objects into cycle-accurate bus protocols on the interface.
+
+Monitor: Passively observes bus pins to sample output and pass data forward.
+
+Scoreboard: Dynamically compares execution output against reference models for error checking.
+
+Test Environment: Controls execution phases, handling object instantiation and managing timing.
+
 ---
 ## 📂 Repository Directory Structure
 
@@ -146,5 +169,20 @@ To keep the repository clean and scalable for upcoming updates, the project is o
 │   ├── fifo/
 │   │   ├── Design/fifo_design.sv
 │   │   ├── testbench/fifo_transaction.sv 
-│   │   └── fifo_transaction.md                        
+│   │   └── fifo_transaction.md
+├── Day08
+|   ├── Apb
+│       ├── design/
+│       |     └── apb_design.sv           
+│       ├── testbench/
+│       |     ├── apb_tb.sv               
+│       │     ├── interface.sv            
+│       │     ├── transaction.sv          
+│       │     ├── generator.sv            
+│       │     ├── driver.sv               
+│       │     ├── monitor.sv             
+│       │     ├── scoreboard.sv
+│       │     ├── test.sv     
+│       │     └── environment.sv                  
+│       └── apb.md                               
 └── README.md                       
